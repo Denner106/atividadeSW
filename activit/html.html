@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Página de login e cadastro">
+    <title>teste</title>
+    <link rel="stylesheet" href="css.css">
+    <script src="js.js" defer></script>
+</head>
+
+<body>
+    <main class="container">
+        <div class="form-container active" id="login-container">
+            <h1 class="form-title">Login</h1>
+            <form id="login-form" aria-labelledby="login-heading">
+                <div class="form-group">
+                    <label for="login-email">Email</label>
+                    <input type="email" id="login-email" placeholder="exemplo@gmail.com" required autocomplete="email">
+                </div>
+                <div class="form-group">
+                    <label for="login-password">Senha</label>
+                    <input type="password" id="login-password" placeholder="digite sua senha" required autocomplete="current-password">
+                </div>
+                <button type="submit" class="btn-primary">logar</button>
+            </form>
+            <button id="to-register" class="btn-secondary">Não tem conta? Cadastre-se</button>
+        </div>
+
+        <div class="form-container" id="register-container">
+            <h1 class="form-title">Cadastro</h1>
+            <form id="register-form" aria-labelledby="register-heading">
+                <div class="form-group">
+                    <label for="register-name">Nome completo</label>
+                    <input type="text" id="register-name" placeholder="Seu nome completo" required autocomplete="name">
+                </div>
+                <div class="form-group">
+                    <label for="register-email">Email</label>
+                    <input type="email" id="register-email" placeholder="exemplo@email.com" required autocomplete="email">
+                </div>
+                <div class="form-group">
+                    <label for="register-phone">Telefone</label>
+                    <input type="tel" id="register-phone" placeholder="(00) 00000-0000" required autocomplete="tel">
+                </div>
+                <div class="form-group">
+                    <label for="register-cpf">CPF</label>
+                    <input type="text" id="register-cpf" placeholder="000.000.000-00" required pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" title="Formato: 000.000.000-00">
+                </div>
+                <div class="form-group">
+                    <label for="register-password">Senha</label>
+                    <input type="password" id="register-password" placeholder="Crie uma senha" required autocomplete="new-password" minlength="6">
+                </div>
+                <div class="form-group">
+                    <label for="register-confirm-password">Confirmar Senha</label>
+                    <input type="password" id="register-confirm-password" placeholder="Confirme sua senha" required autocomplete="new-password">
+                </div>
+                <button type="submit" class="btn-primary">Cadastrar</button>
+            </form>
+            <button id="to-login" class="btn-secondary">Já tem conta? Faça login</button>
+        </div>
+    </main>
+
+</body>
+</html>

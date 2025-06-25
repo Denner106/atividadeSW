@@ -1,0 +1,124 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f5f5f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: 400px;
+    position: relative;
+}
+
+.form-container {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    position: absolute;
+    width: 100%;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.form-container.active {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.form-title {
+    margin-bottom: 1.5rem;
+    color: #333;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #555;
+    font-size: 0.9rem;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+    transition: border 0.3s;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: #4a90e2;
+    box-shadow: 0 0 0 2px rgba(74, 144, 226, 0.2);
+}
+
+.btn-primary {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: #4a90e2;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 1rem;
+    transition: background-color 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: #9c0000;
+}
+
+.btn-secondary {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: transparent;
+    color: #4a90e2;
+    border: 1px solid #4a90e2;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 1rem;
+    transition: all 0.3s;
+}
+
+.btn-secondary:hover {
+    background-color: #ffffff;
+}
+
+input:invalid {
+    border-color: #ff6b6b;
+}
+
+input:valid {
+    border-color: #51cf66;
+}
+
+.error-message {
+    color: #ff6b6b;
+    font-size: 0.8rem;
+    margin-top: 0.25rem;
+    display: none;
+}
+
+input:invalid + .error-message {
+    display: block;
+}
